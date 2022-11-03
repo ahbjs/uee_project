@@ -1,10 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Image } from 'react-native';
+import logo from './assets/logo.png'
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Image
+        style={styles.logoStyle}
+        source={logo}
+      />
+      <Text style={styles.txtStyle}>Tea Collector</Text>
       <StatusBar style="auto" />
     </View>
   );
@@ -13,8 +18,17 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#09B44D',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  txtStyle: {
+    color:'#fff',
+    fontSize:25,
+    fontWeight:"bold",
+  },
+  logoStyle: {
+    width: 100,
+    height: 125,
   },
 });
