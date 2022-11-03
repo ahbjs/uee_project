@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image } from 'react-native';
 import logo from './assets/logo.png'
+import { Button } from 'react-native-paper';
 
 export default function App() {
   return (
@@ -10,6 +11,11 @@ export default function App() {
         source={logo}
       />
       <Text style={styles.txtStyle}>Tea Collector</Text>
+
+      <Button icon="coffee-to-go" style={styles.startBtn} mode="contained" buttonColor="#000" onPress={() => console.log('Pressed')}>
+        Let's Start
+      </Button>
+
       <StatusBar style="auto" />
     </View>
   );
@@ -30,5 +36,8 @@ const styles = StyleSheet.create({
   logoStyle: {
     width: 100,
     height: 125,
+  },
+  startBtn: {
+    marginTop:20
   },
 });
