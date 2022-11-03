@@ -30,6 +30,7 @@ const styles = StyleSheet.create({
     color:'#fff',
     fontSize:25,
     fontWeight:"bold",
+    marginTop:10,
   },
   logoStyle: {
     width: 100,
